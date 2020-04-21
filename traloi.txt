@@ -1,9 +1,9 @@
-﻿Câu 4: 
+ext﻿Câu 4: 
 	- Các phương thức được gọi khi bấm vào back: 	onPause() -> onStop() -> onDestroy().
 	- Các phương thức được gọi khi mở lại ứng dụng:	onCreate() -> onStart() -> onResume().
 Câu 5: 
 	- Các phương thức được gọi khi bấm vào home: 	onPause() -> onStop().  
 	- Các phương thức được gọi khi mở lại ứng dụng:	onRestart() -> onStart() -> onResume().
 Câu 6: 
-	- Ta nên lưu thông tin trong phương thức onStop().
-	- Vì: Phương thức onPause() được gọi khá nhiều lần trong một vòng đời Acttivity nếu lưu thông tin trên onPause() thì nhiều khả năng ứng dụng sẽ chạy chậm.Trong trường hợp này thì lưu dữ liệu trên onStop() là tốt hơn.  
+	-Nếu cần lưu thông tin của ứng dụng để khôi phục lại trạng  thái hiện thị của ứng dụng thì cần phải thực hiện trong phương thức	vòng đời là: onPause
+	-Vì onPause sẽ được gọi khá là nhiều lần trong một vòng đời Activity, nó sẽ được thực hiện rất nhanh, và các hoạt động tiếp theo sẽ không được tiếp tục tới khi nó trở lại.
